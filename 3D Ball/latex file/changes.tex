@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\pagestyle{fancy}
+
+\lhead{Bouncing Balls Screen Saver}
+\rhead{ \thepage}
+\begin{document}
+\begin{center}
+
+\begin{Huge}
+
+\textbf{\textit{ASSIGNMENT 1}}
+\noindent
+{\color{red} \rule{\linewidth}{0.5mm} }
+\textit{Bouncing Balls Screen Saver}
+\noindent
+{\color{red} \rule{\linewidth}{0.3mm} }
+\end{Huge}
+Date = 19/02/2018
+\end{center}
+%\hspace*{-3cm}%
+\begin{Huge}
+\textit{•\section*{Group Partners :-}}
+\end{Huge}
+
+\begin{large}
+
+
+
+
+\color{red}\textbf{Name} = \color{black}Mayank Singh 
+
+ 
+\color{red}\textbf{Roll no.}=\color{black}  2016CSJ0024\\
+
+
+\color{red}\textbf{Name} =\color{black} Thaisnang Reang
+
+  
+\color{red}\textbf{Roll no.}=  \color{black}2016CSJ0029
+
+%\hspace*{-3cm}%
+\end{large}
+\begin{figure}[b!]
+ 	\includegraphics[scale=0.4]{front.jpg}
+\end{figure}
+
+\newpage
+\begin{huge}
+\section{Overview}
+\end{huge}
+\noindent
+{\color{red} \rule{\linewidth}{0.2mm} }
+
+Our Screen saver will start with an welcome audio clip. it will have n Balls rotating and translating on the screen. The user has the option to change the speeds of  balls, pause the Screen Saver and change the Camera view of Screen .
+
+\hspace*{-5cm}%s
+\begin{huge}
+\section{Subcomponents}
+\noindent
+{\color{red} \rule{\linewidth}{0.2mm} }
+\end{huge}
+
+
+\textbf{Class Ball -} \textit{The Ball Class defines the properties of the ball. It has the following members:\\}
+
+\textbf{ 1.Centre -} \textit{This is a Vector of the centre coordinates of the ball. It
+defines the coordinates of the centre of the ball.\\} 
+
+\textbf{2.Velocity -}\textit{ This is a Vector which defines the velocity of the ball.\\} \
+
+\textbf{3.Radius -}  \textit{ The radius of the ball.\\}
+
+\textbf{4.Mass -}  – \textit{Mass of the ball.\\}
+
+\textbf{5.Ballmaker() -} –\textit{it makes the ball with random position and random speed whenever it is called.\\}
+
+\textbf{6.translate() -} –\textit{it is used to translate the balls with random speed and random position.\\}
+
+\newpage
+
+
+\textbf{Class Terrain -} \textit{ It has the following members:\\}
+
+\textbf{1.transl()-}  – \textit{It is used to move the terrain.\\}
+\\
+
+\textbf{Class physics -} \textit{The Physics Class defines the properties of the collision. It has the following members:\\}
+
+\textbf{1.collision()-}  – \textit{It detects and resolves the collision between balls.\\}
+\textbf{2.terr()-}  – \textit{It detects and resolves the collision between balls and the terrain.\\}
+\begin{huge}
+\section{GUI}
+\noindent
+{\color{red} \rule{\linewidth}{0.2mm} }
+\end{huge}
+
+\textbf{The GUI have the following components:\\}
+
+    \textbf{1.display-} \textit{It is responsible for drawing the  n balls, wall and Terrain.\\}
+
+	 \textbf{2.keyboard input-}\textit{ It detects keyboard input from the user and
+          acts accordingly.\\}
+\textbf{2.1 Press "P"-}  – \textit{To pause ans restart .\\}
+\textbf{2.2 Press "w" -}  – \textit{To increase speed of balls.\\}
+\textbf{2.3 Press "S" -}  – \textit{To decrease the speed of balls.\\}
+\textbf{2.4 Press "esc"-}  – \textit{for exiting.\\}
+\textbf{2.5 Press "up"-}  – \textit{To zoom in.\\}
+\textbf{2.6 Press"down"-}  – \textit{To zoom out.\\}
+\textbf{2.7 Press "right key"-}  – \textit{To move camera right.\\}
+\textbf{2.8 Press "left key"-}  – \textit{To move camera left.\\}
+
+\newpage
+\begin{huge}
+\section{Physics}
+\noindent
+{\color{red} \rule{\linewidth}{0.2mm} }
+\end{huge}
+\paragraph{}
+All the collisions will be elastic in nature.The collision between balls and terrain will be detected by the distance between their centres i.e- if the distance is equal to the sum of the radius of the balls.And the collision between walls will be detected in the same way as well by the distance between the centre of the balls and the wall. 
+
+\begin{huge}
+\section{Variable Ball Speeds}
+\noindent
+{\color{red} \rule{\linewidth}{0.2mm} }
+\end{huge}
+\paragraph{}
+The balls speed can then be increased or decreased between a
+pre-defined maximum or minimum by pressing the
+keyboard keys, whichever is preferred by the user. The balls velocity which
+is maintained in the ball object will be updated accordingly.The collisions and momentum will be handled according to the defined physics.
+
+\end{document}
